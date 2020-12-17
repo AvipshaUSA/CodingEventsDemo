@@ -18,6 +18,8 @@ namespace CodingEventsDemo.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<EventTag>().HasKey(et => new { et.EventId, et.TagId });
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
